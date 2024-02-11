@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<div class="container">
+    <h1 class="mt-4"> Règlements</h1>
+
+    <!-- Tableau pour afficher les règlements -->
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th>  ID Règlement</th>
+                <th>Date Règlement</th>
+                <th>Montant Total</th>
+                <th>Nom client</th>
+                <th>Mode de Paiement</th>
+                <th>État de Paiement</th>
+                <!-- Ajouter d'autres colonnes si nécessaire -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Utilisez une boucle pour afficher les règlements (remplacez cela par des données dynamiques de votre backend) -->
+            <tr *ngFor="let reglement of reglements">
+                <td><input type="radio" name="selectedReglement" [(ngModel)]="selectedReglementId" [value]="reglement.idRegelment" [ngModelOptions]="{standalone: true}" />
+
+                    {{ reglement.idRegelment }}</td>
+                <td>{{ reglement.dateReglement }}</td>
+                <td>{{ reglement.montantTotal }}</td>
+                <td>{{ reglement.client.name }}</td>
+                <td>{{ reglement.modePaiement }}</td>
+                <td>{{ reglement.etatPaiement }}</td>
+            </tr>
+            <!-- Répétez ces lignes pour chaque règlement -->
+        </tbody>
+    </table>
+
+    <!-- Bouton pour payer une facture individuelle -->
+    <button class="btn btn-primary" routerLink="payerFacutre">Payer Facture </button>
+
+    <!-- Bouton pour payer toutes les factures groupées 
+    <button class="btn btn-success">Payer Factures Groupées</button>
+
+    <!-- Formulaire pour filtrer les règlements par client
+    <form class="mt-4">
+        <div class="form-group">
+            <label for="clientId">Filtrer par Client ID :</label>
+            <input type="text" class="form-control" id="clientId" placeholder="Entrez l'ID du Client">
+        </div>
+        <button type="submit" class="btn btn-info">Filtrer</button>
+    </form>-->
+</div>
+
+<!-- Ajouter les liens vers les fichiers JavaScript de Bootstrap et jQuery si nécessaire -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+<router-outlet></router-outlet>

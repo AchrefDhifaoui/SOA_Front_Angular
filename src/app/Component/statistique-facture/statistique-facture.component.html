@@ -1,0 +1,66 @@
+<div class="content">
+    <div class="firstChart">
+       
+       <div class="forChart2">
+        <div class="pie-chart">
+            <canvas #myPieChart width="400" height="200"></canvas>
+          </div>
+          
+          
+       </div>
+ </div>
+    <div class="secondChart">
+       
+     <div class="wrapper">
+     <input type="radio" name="select" id="option-1" (change)="updateChartData('days')" >
+ 
+     <input type="radio" name="select" id="option-2" (change)="updateChartData('months')">
+ 
+     <input type="radio" name="select" id="option-3" checked (change)="updateChartData('years')">
+ 
+       <label for="option-1" class="option option-1">
+         <div class="dot"></div>
+          <span>Days</span>
+          </label>
+ 
+       <label for="option-2" class="option option-2">
+         <div class="dot"></div>
+          <span>Months</span>
+       </label>
+ 
+       <label for="option-3" class="option option-3">
+         <div class="dot"></div>
+          <span>Years</span>
+       </label>
+    </div>
+     
+    <div class="forChart">
+        <canvas #myBarChart ></canvas>
+    </div>
+       
+    </div>
+  </div>
+  <div class="client">
+<h4>les clients Non encore  Payee</h4>
+  <table class="styled-table" >
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let Client of ClientNonPayee">
+            <td>{{Client.id}}</td>
+            <td>{{Client.name}}</td>
+            <td>{{Client.email}}</td>
+        </tr>
+        <!-- and so on... -->
+    </tbody>
+</table>
+
+  </div>
+
+ 

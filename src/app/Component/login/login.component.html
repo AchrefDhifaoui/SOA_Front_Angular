@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Add the necessary meta tags and link to Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <title>Your Page Title</title>
+</head>
+<body>
+
+ <!-- login.component.html -->
+
+ <h2>Login</h2>
+    
+ <form (ngSubmit)="onSubmit()">
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required [(ngModel)]="email">
+     <br>
+     <label for="password">Password:</label>
+     <input type="password" id="password" name="password" required [(ngModel)]="password">
+     <br>
+     <button type="submit">Login</button>
+ </form>
+
+
+  <!-- Add the necessary scripts and link to Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

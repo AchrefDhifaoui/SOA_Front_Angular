@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/* styles.css */
+/* Remplacez cette ligne dans styles.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+/* Style pour le conteneur principal */
+.container {
+    margin-top: 50px;
+}
+
+/* Style pour le titre */
+h1 {
+    color: #007bff; /* Bleu Bootstrap par défaut */
+}
+
+/* Style pour le tableau */
+.table {
+    margin-top: 20px;
+}
+
+/* Style pour les boutons */
+.btn {
+    margin-top: 10px;
+}
+
+/* Style pour le formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style pour le pied de page, si nécessaire */
+/* footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; 
+    padding: 10px;
+    text-align: center;
+} */
